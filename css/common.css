@@ -1,0 +1,69 @@
+@charset "utf-8";
+/* 
+    헤더구역, 풋터구역 등 공통구역에 대한 스타일
+    컨텐츠 박스의 최대넓이(row)
+    body 태그에 기본글꼴, 크기 등 설정
+*/
+
+/* 헤더구역 */
+#header{
+    background: #25204cf7;
+    color:white;
+    overflow: hidden;
+    height:50px;
+    width:100%;
+    position:fixed;
+    top:0; left: 0;
+    z-index: 9999;
+}
+#header .head h1 {
+    float: left;
+    margin-left: 10px;
+}
+#header #nav{
+    float: left;
+    margin-top:15px;
+}
+#header #nav .depth1 > li {
+    float: left;
+    margin-right:50px;
+}
+#header #nav .depth1 > li > a {
+    display: block;
+}
+#header #nav .depth1 > li:nth-child(1) {
+    margin-left: 50px;
+}
+#header .rightnav{
+    float: right;
+    margin-top:15px;
+}
+#header .rightnav .depth1 > li{
+    float: left;
+    margin-right: 50px;
+}
+#header .rightnav .depth1 > li:nth-child(3){
+    background: lightblue;
+}
+
+/* 풋터구역 */
+#foot{
+    background: #252525;
+    color:white;
+    padding:50px 400px;
+    position: relative;
+    height: 400px;
+}
+#foot > h2 {
+    float: left;
+}
+#foot > .right {
+    color:#D5D5D5;
+    font-size: 13px;
+    float: left;
+    margin-left: 50px;
+    margin-top:10px;
+}
+#foot .right .first{
+    margin-top:20px;
+}

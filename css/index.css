@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/* 메인페이지에서 공통구역을 제외한 본문구역 스타일 */
+
+#center{
+    background-image: url(../imgs/bg-min.png);
+    height:100vh;
+    position:relative;
+    background-size: cover;
+    margin-bottom:500px;
+    background-position: center 0;
+}
+#center .bg {
+    text-align: center;
+    padding-top:100px;
+}
+#center > .btn{
+    position:absolute;
+    top:350px; left: 50%;
+    transform: translate(-50%);
+}
+#center > .btn a{
+    display: inline-block;
+    padding:10px 30px;
+    margin:0 10px;
+    background: #35ceca;
+    color:white;
+    font-size: 17px;
+    font-weight: bold;
+}
+#center > .btn a > img{
+    margin-right: 5px;
+}
+#center .board{
+    max-width: 1200px;
+    overflow: hidden;
+    margin:0 auto;
+    padding-top:200px;
+}
+#center .board h2{
+    color:white;
+    background-color: #fdd650;
+    padding:20px;
+}
+#center .board>div:nth-child(1) h2{background:none;}
+#center .board>div:nth-child(2) h2{background:none;}
+#center .board > div{
+    width:32%;
+    float: left;
+    height:330px;
+    background-size: cover;
+    border:1px solid black;
+    margin:10px 0;
+    background-color: white;
+}
+#center .board > div:nth-child(3n+2){
+    margin:10px 2%;
+}
+#center .board .one{
+    background-image: url(../imgs/bg-card-notice-min.jpg);
+}
+#center .board .two{
+    background-image: url(../imgs/bg-card-patch-min.jpg);
+}
+#center .board .three{
+    background-image: url(../imgs/bg-card-event-min.png);
+}
+
+/* 슬라이드 자체 넓이는 무조건 outer에게 */
+.bfiveOuter{
+    width:250px;
+    height: 160px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.bfiveOuter .slide{
+    background-size: cover;
+    height:160px;
+    background-repeat: no-repeat;
+}
+.bfiveOuter .slide1{background-image: url(../imgs/[커플왕]\ 삼성생명\ ♡\ 옥구슬\ _\ 좋아요\ 눌러\ 쥬뎨요\ _.gif);}
+.bfiveOuter .slide2{background-image: url(../imgs/[커플왕]\ 아저씨랑\ 아줌마.jpg);}
+.bfiveOuter .slide3{background-image: url(../imgs/킹\ 귀여워요\ _\ 실버.jpg);}
+
+
+
+
+.depth2{display: none;}
