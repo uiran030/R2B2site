@@ -2,6 +2,7 @@
 
 /* 메인페이지에서 공통구역을 제외한 본문구역 스타일 */
 
+/* 메인 상단 로고와 button부분 */
 #center{
     background-image: url(../imgs/bg-min.png);
     height:100vh;
@@ -10,16 +11,16 @@
     margin-bottom:500px;
     background-position: center 0;
 }
-#center .bg {
+#center .upcenter .bg {
     text-align: center;
     padding-top:100px;
 }
-#center > .btn{
+#center .upcenter > .btn{
     position:absolute;
     top:350px; left: 50%;
     transform: translate(-50%);
 }
-#center > .btn a{
+#center .upcenter > .btn a{
     display: inline-block;
     padding:10px 30px;
     margin:0 10px;
@@ -28,49 +29,88 @@
     font-size: 17px;
     font-weight: bold;
 }
-#center > .btn a > img{
+#center .upcenter > .btn a > img{
     margin-right: 5px;
 }
-#center .board{
-    max-width: 1200px;
+
+
+/* 메인 중간 게시물부분 */
+.micenter {
+    max-width:1200px;
+    margin:200px auto;
     overflow: hidden;
-    margin:0 auto;
-    padding-top:200px;
 }
-#center .board h2{
-    color:white;
+.micenter .board {
+    float: left;
+    width: 100%;
+}
+.micenter ul h3 {
     background-color: #fdd650;
     padding:20px;
+    border-radius: 10px 10px 0 0;
+    color:white;
+    font-size: 1.5rem
 }
-#center .board>div:nth-child(1) h2{background:none;}
-#center .board>div:nth-child(2) h2{background:none;}
-#center .board > div{
+.micenter ul .noback{
+    background: none;
+}
+.micenter li {
+    background-color: white;
+    height:330px;
+    border-radius: 20px;
     width:32%;
     float: left;
-    height:330px;
+    border:1px solid red;
     background-size: cover;
-    border:1px solid black;
-    margin:10px 0;
+    margin-bottom: 2%;
+}
+.micenter .board > li:nth-child(2){
+    margin: 0 2%;
+}
+.micenter .board > li:nth-child(5){
+    margin: 0 2%;
+}
+.micenter #one {
+    background: url(../imgs/bg-card-notice-min.jpg);
+    background-size: cover;
+    position:relative;
+}
+.micenter .board .wback{
     background-color: white;
+    position:absolute;
+    bottom: 0; left: 0;
+    width:100%;
+    padding: 3%;
+    border-radius: 0 0 20px 20px;
 }
-#center .board > div:nth-child(3n+2){
-    margin:10px 2%;
+.micenter .board .wback p {
+    color:#88d718;
+    font-size: 18px;
+    padding-bottom: 5px;
 }
-#center .board .one{
-    background-image: url(../imgs/bg-card-notice-min.jpg);
+.micenter #two {
+    background: url(../imgs/bg-card-patch-min.jpg);
+    background-size: cover;
+    position:relative;
 }
-#center .board .two{
-    background-image: url(../imgs/bg-card-patch-min.jpg);
-}
-#center .board .three{
+.micenter #three {
     background-image: url(../imgs/bg-card-event-min.png);
 }
-
+.micenter table tr td:nth-child(2){
+    font-size: 12px;
+    width:20%;
+}
+.micenter #four {
+    background-image: url(../imgs/bg-card-event-min.png);
+}
+.micenter #five{
+    background-color:#fdd650;
+}
 /* 슬라이드 자체 넓이는 무조건 outer에게 */
 .bfiveOuter{
     width:250px;
     height: 160px;
-    margin:0 auto;
+    margin:10px auto;
     overflow: hidden;
 }
 .bfiveOuter .slide{
@@ -81,8 +121,3 @@
 .bfiveOuter .slide1{background-image: url(../imgs/[커플왕]\ 삼성생명\ ♡\ 옥구슬\ _\ 좋아요\ 눌러\ 쥬뎨요\ _.gif);}
 .bfiveOuter .slide2{background-image: url(../imgs/[커플왕]\ 아저씨랑\ 아줌마.jpg);}
 .bfiveOuter .slide3{background-image: url(../imgs/킹\ 귀여워요\ _\ 실버.jpg);}
-
-
-
-
-.depth2{display: none;}

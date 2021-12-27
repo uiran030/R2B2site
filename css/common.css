@@ -46,6 +46,9 @@
     background: lightblue;
 }
 
+.depth2{display: none;}
+
+
 /* 풋터구역 */
 #foot{
     background: #252525;
@@ -58,12 +61,19 @@
     float: left;
 }
 #foot > .right {
-    color:#D5D5D5;
     font-size: 13px;
     float: left;
     margin-left: 50px;
     margin-top:10px;
+    color:#ACACAC;
+}
+#foot > .right > .middle {color:#d5d5d5;}
+#foot > .right > .middle > .md > .orange{
+    color:orange;
 }
 #foot .right .first{
     margin-top:20px;
+}
+#foot .right .second > .se > a > .line{
+    text-decoration: underline;
 }
