@@ -49,7 +49,14 @@
     padding:20px;
     border-radius: 10px 10px 0 0;
     color:white;
-    font-size: 1.5rem
+    font-size: 1.5rem;
+}
+.micenter ul h3 > span {
+    float:right;
+    text-align: center;
+    background-color: #ff6333bf;
+    width:30px; height: 30px;
+    border-radius: 100%;
 }
 .micenter ul .noback{
     background: none;
@@ -98,7 +105,7 @@
 }
 
 .micenter table tr td{
-    padding:5px 10px;
+    padding:8px 13px;
 }
 .micenter table tr td:nth-child(2){
     font-size: 12px;
@@ -110,6 +117,21 @@
 }
 .micenter #five{
     background-color:#fdd650;
+    position:relative;
+}
+.micenter #five .arrow a{
+    font-size: 25px;
+    color:white;
+}
+.micenter #five .arrow a:nth-child(1){
+    position:absolute;
+    top:50%; left:25px;
+    transform: translateY(-50%);
+}
+.micenter #five .arrow a:nth-child(2){
+    position:absolute;
+    top:50%; right:25px;
+    transform: translateY(-50%);
 }
 /* 슬라이드 자체 넓이는 무조건 outer에게 */
 .bfiveOuter{

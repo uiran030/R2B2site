@@ -9,12 +9,11 @@
 #header{
     background: #25204cf7;
     color:white;
-    overflow: hidden;
     height:50px;
     width:100%;
     position:fixed;
     top:0; left: 0;
-    z-index: 9999;
+    z-index: 99;
 }
 #header .head h1 {
     float: left;
@@ -23,52 +22,77 @@
 #header #nav{
     float: left;
     margin-top:15px;
+    margin-left: 50px;
 }
 #header #nav .depth1 > li {
     position:relative;
     float: left;
     margin-right:50px;
+    padding:0px 20px 10px 0;
 }
 #header #nav .depth1 > li > a {
     display: block;
 }
+#header #nav .depth1 > li:hover > a::after{
+    content: '';
+    display: block;
+    clear: both;
+    border-bottom: 2px solid #35ceca;
+}
 #header #nav .depth2{
-    display: none;
-    background-color: teal;
     position:absolute;
     top:100%; left:0;
-    width:100%;
-    z-index: 99999999999999;
-    display: none;
+    width:150px;
     height:300px;
+    text-align: left;
+    padding-top:10px;
+    display: none;
+    z-index: 99999;
+}
+#header #nav:hover .depth2 {
+    display: block;
+}
+#header #nav .depth2 > li {
+    padding:5px 0;
 }
 #header #nav .depth2 > li > a{
     display: block;
 }
-#header #nav .depth1 > li:hover .depth2{
-    background: #fff;
-    color:#000;
-    display: block;
+#header #nav .depth2 > li:hover > a{
+    color:#35ceca;
+    transition: all 0.5s;
 }
-#header #nav .depth1 > li:nth-child(1) {
-    margin-left: 50px;
+.head .decobox {
+    position:absolute;
+    top:100%; left:0;
+    width: 100%;
+    background-color: #25204cce;
+    height:250px;
+    display: none;
 }
-#header #nav .depth1  li  a{
-    display: block;
-}
+#nav:hover + .decobox { display: block;}
+
+/* right 박스 */
 #header .rightnav{
     float: right;
-    margin-top:15px;
 }
 #header .rightnav .depth1 > li{
     float: left;
     margin-right: 50px;
     position:relative;
+    margin-top:15px;
 }
 #header .rightnav .depth1 > li:nth-child(3){
-    background: lightblue;
+    /* background: #05deda; */
+    background-color: #35ceca;
+    height: 50px;
+    margin-top: 0;
+    padding:0 15px;
+    line-height: 50px;
 }
-
+#header .rightnav .depth1 > li:nth-child(3):hover {
+    background-color: #05deda;
+}
 
 
 /* 풋터구역 */
