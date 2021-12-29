@@ -78,6 +78,7 @@
     float: left;
     background-size: cover;
     margin-bottom: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(221, 221, 221, 0.24);
 }
 .micenter .board > li:nth-child(2){
     margin: 0 2%;
