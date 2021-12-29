@@ -54,14 +54,15 @@
     color:white;
     font-size: 1.5rem;
 }
-.micenter ul h3 > span {
+.micenter ul h3 > a {
     float:right;
     text-align: center;
     background-color: #ff6333bf;
     width:30px; height: 30px;
     border-radius: 100%;
+    line-height: 27px;
 }
-.micenter ul h3 > span:hover{
+.micenter ul h3 > a:hover{
     background-color:#ff6333;
     transition: all 0.5s;
 }
@@ -88,6 +89,13 @@
     background: url(../imgs/bg-card-notice-min.jpg);
     background-size: cover;
     position:relative;
+    background-position: center;
+    transition: all 0s;
+}
+.micenter #one:hover {
+    background-size: 105%;
+    background-position: center;
+    transition: all 1s;
 }
 .micenter .board .wback{
     background-color: white;
@@ -106,6 +114,13 @@
     background: url(../imgs/bg-card-patch-min.jpg);
     background-size: cover;
     position:relative;
+    background-position: center;
+    transition: all 0s;
+}
+.micenter #two:hover {
+    background-size: 105%;
+    background-position: center;
+    transition: all 1s;
 }
 .micenter #three {
     background-image: url(../imgs/bg-card-event-min.png);
