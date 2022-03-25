@@ -156,21 +156,77 @@
     top:50%; right:25px;
     transform: translateY(-50%);
 }
-.micenter #six {
-    background-image: url(../imgs/bg-card-event-min.png);
-}
 /* 슬라이드 자체 넓이는 무조건 outer에게 */
 .bfiveOuter{
     width:250px;
     height: 160px;
     margin:10px auto;
-    overflow: hidden;
 }
 .bfiveOuter .slide{
+    padding:10px;
     background-size: cover;
     height:160px;
     background-repeat: no-repeat;
+    border: 1px solid black;
 }
-.bfiveOuter .slide1{background-image: url(../imgs/[커플왕]\ 삼성생명\ ♡\ 옥구슬\ _\ 좋아요\ 눌러\ 쥬뎨요\ _.gif);}
-.bfiveOuter .slide2{background-image: url(../imgs/[커플왕]\ 아저씨랑\ 아줌마.jpg);}
-.bfiveOuter .slide3{background-image: url(../imgs/킹\ 귀여워요\ _\ 실버.jpg);}
+.bfiveOuter .slide1{background-image: url(../imgs/slide1.gif); position:relative;}
+.bfiveOuter .slide2{background-image: url(../imgs/slide2.jpg);}
+.bfiveOuter .slide3{background-image: url(../imgs/slide3.jpg);}
+.bfiveOuter .slide1 .ribon{
+    transform: rotate(-45deg);
+    background-color: #fdd650;
+    color: white;
+    position:absolute;
+    top:10px; left: -35px;
+    text-indent: 40px;
+    width:150px;
+    height:30px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.bfiveOuter .slide1 .btn{
+    position:absolute;
+    top:100%; left:50%;
+    transform: translateX(-50%);
+    margin-top:20px;
+    width:90%;
+    text-align: center;
+    background-color: #35ceca;
+    border-radius: 10px;
+    color:white;
+    padding:3px 0;
+}
+
+
+/* six */
+.micenter #six {
+    background-image: url(../imgs/bg-card-event-min.png);
+}
+.micenter #six .rankingbox .ranking_btn{
+    display: flex;
+    justify-content: space-between;
+    margin:0 10px;
+}
+.micenter #six .rankingbox .ranking_btn button{
+    width:30%;
+    border-radius: 10px;
+    background-color: #c9c9c9;
+    border:none;
+    color:white;
+    font-size:17px;
+    display: block;
+    margin:10px 0;
+}
+.micenter #six .rankingbox .ranking_btn button:nth-child(1) {background-color: #35ceca;}
+.micenter #six .rankingbox table {text-align: center; font-weight: bold; font-size: 13px;}
+.micenter #six .rankingbox table > thead tr{
+    color:#ff6333; 
+    border-top: 1px solid #ff6333; 
+    border-bottom: 1px solid #ff6333;
+    height:30px;
+}
+.micenter #six .rankingbox table > thead th:nth-child(1) {width:15%;}
+.micenter #six .rankingbox table > thead th:nth-child(2) {width:auto;}
+.micenter #six .rankingbox table > thead th:nth-child(3) {width:20%;}
+.micenter #six .rankingbox table > thead th:nth-child(4) {width:30%;}
+.micenter #six .rankingbox table > tbody tr > td:nth-child(2) {font-size: 14px;}
