@@ -23,7 +23,7 @@
     position:relative;
     padding:0 70px;
     margin-top:13px;
-    border-right: 1px solid white;
+    border-right: 1px solid #999;
 }
 #header #nav .depth1 > li:last-child{border:none;}
 #header #nav .depth1 > li > a {
