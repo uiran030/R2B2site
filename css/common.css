@@ -21,11 +21,19 @@
 #header #nav .depth1 {display: flex; justify-content: center;}
 #header #nav .depth1 > li {
     position:relative;
-    margin-right: 130px;
+    padding:0 70px;
     margin-top:13px;
+    border-right: 1px solid white;
 }
+#header #nav .depth1 > li:last-child{border:none;}
 #header #nav .depth1 > li > a {
     display: block;
+}
+#header #nav .depth1 > li > a::after{
+    content: '';
+    display: block;
+    clear: both;
+    border-bottom: 2px solid #25204cf7;
 }
 #header #nav .depth1 > li:hover > a::after{
     content: '';
@@ -35,7 +43,7 @@
 }
 #header #nav .depth2{
     position:absolute;
-    top:100%; left:0;
+    top:100%; left:20px;
     width:150px;
     height:300px;
     text-align: left;

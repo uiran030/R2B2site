@@ -138,64 +138,66 @@
 .micenter #four {
     background-image: url(../imgs/bg-card-event-min.png);
 }
+
+/* five */
 .micenter #five{
     background-color:#fdd650;
     position:relative;
 }
-.micenter #five .arrow a{
-    font-size: 25px;
-    color:white;
-}
-.micenter #five .arrow a:nth-child(1){
-    position:absolute;
-    top:50%; left:25px;
-    transform: translateY(-50%);
-}
-.micenter #five .arrow a:nth-child(2){
-    position:absolute;
-    top:50%; right:25px;
-    transform: translateY(-50%);
-}
 /* 슬라이드 자체 넓이는 무조건 outer에게 */
 .bfiveOuter{
     width:250px;
-    height: 160px;
+    height: 258px;
     margin:10px auto;
+    position:relative;
 }
+.bfiveOuter .bfiveInner {background:white; padding:5px;}
 .bfiveOuter .slide{
     padding:10px;
     background-size: cover;
     height:160px;
     background-repeat: no-repeat;
-    border: 1px solid black;
+    position:relative;
 }
-.bfiveOuter .slide1{background-image: url(../imgs/slide1.gif); position:relative;}
+.bfiveOuter .slide1{background-image: url(../imgs/slide1.gif);}
 .bfiveOuter .slide2{background-image: url(../imgs/slide2.jpg);}
-.bfiveOuter .slide3{background-image: url(../imgs/slide3.jpg);}
-.bfiveOuter .slide1 .ribon{
+.bfiveOuter .slide3{background-image: url(../imgs/slide3.jpg); background-position: center;}
+.bfiveOuter .slide .ribon{
     transform: rotate(-45deg);
-    background-color: #fdd650;
     color: white;
     position:absolute;
-    top:10px; left: -35px;
+    top:10px; left: -40px;
     text-indent: 40px;
     width:150px;
     height:30px;
     font-weight: bold;
     line-height: 30px;
+    background-color: #fdd650;
 }
-.bfiveOuter .slide1 .btn{
-    position:absolute;
-    top:100%; left:50%;
-    transform: translateX(-50%);
-    margin-top:20px;
-    width:90%;
+.bfiveOuter .slide .btn{
+    transform: translateY(180px);
+    margin:0 auto;
+    width:100%;
     text-align: center;
     background-color: #35ceca;
     border-radius: 10px;
     color:white;
-    padding:3px 0;
+    padding:5px 0;
+    font-size: 15px;
 }
+.bfiveOuter .slick-arrow {
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer; 
+    border:none; 
+    background: none; 
+    color:white;
+    font-size: 25px;
+}
+.bfiveOuter .slick-arrow.slick-prev { left:-40px; z-index:99999;}
+.bfiveOuter .slick-arrow.slick-next { right:-40px; }
+.bfiveInner.slick-initialized.slick-slider > .slick-list{overflow:visible;}
 
 
 /* six */
@@ -206,8 +208,9 @@
     display: flex;
     justify-content: space-between;
     margin:0 10px;
+    text-align: center; 
 }
-.micenter #six .rankingbox .ranking_btn button{
+.micenter #six .rankingbox .ranking_btn a{
     width:30%;
     border-radius: 10px;
     background-color: #c9c9c9;
@@ -215,10 +218,14 @@
     color:white;
     font-size:17px;
     display: block;
-    margin:10px 0;
+    margin:5px 0;
 }
-.micenter #six .rankingbox .ranking_btn button:nth-child(1) {background-color: #35ceca;}
-.micenter #six .rankingbox table {text-align: center; font-weight: bold; font-size: 13px;}
+.micenter #six .rankingbox .ranking_btn a.on {background-color: #35ceca;}
+
+.micenter #six .rankingbox #ranking_list table {display: none; text-align: center; }
+.micenter #six .rankingbox #ranking_list table.on {display: block;}
+
+.micenter #six .rankingbox table {font-weight: bold; font-size: 13px;}
 .micenter #six .rankingbox table > thead tr{
     color:#ff6333; 
     border-top: 1px solid #ff6333; 
@@ -227,6 +234,18 @@
 }
 .micenter #six .rankingbox table > thead th:nth-child(1) {width:15%;}
 .micenter #six .rankingbox table > thead th:nth-child(2) {width:auto;}
-.micenter #six .rankingbox table > thead th:nth-child(3) {width:20%;}
-.micenter #six .rankingbox table > thead th:nth-child(4) {width:30%;}
+.micenter #six .rankingbox table > thead th:nth-child(3) {width:15%;}
+.micenter #six .rankingbox table > thead th:nth-child(4) {width:20%;}
+.micenter #six .rankingbox table > tbody tr:nth-child(2) td:nth-child(1){
+    background-image: url(../imgs/icon-rank2-min.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    color:white;
+}
+.micenter #six .rankingbox table > tbody tr:nth-child(3) td:nth-child(1){
+    background-image: url(../imgs/icon-rank3-min.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    color:white;
+}
 .micenter #six .rankingbox table > tbody tr > td:nth-child(2) {font-size: 14px;}

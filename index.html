@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R2beat</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
+    <title>R2beat</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
     <header>
@@ -156,24 +159,20 @@
                         <h3>패션 갤러리
                             <a href="#">+</a>
                         </h3>
-                        <div class="arrow">
-                            <a href="#"><i class="fas fa-chevron-circle-left"></i></a>
-                            <a href="#"><i class="fas fa-chevron-circle-right"></i></a>
-                        </div>
                         <div class="bfiveOuter">
                             <div class="bfiveInner">
                                 <div class="slide slide1">
                                     <p class="ribon">BEST 1</p>
                                     <p class="btn">[커플왕]좋아요 눌러주세요!</p>
                                 </div>
-                                <!-- <div class="slide slide2">
-                                    <span class="ribon">BEST 2</span>
-                                    <span class="btn">[커플왕]</span>
+                                <div class="slide slide2">
+                                    <p class="ribon">BEST 2</p>
+                                    <p class="btn">[커플왕] 아줌마와 아저씨</p>
                                 </div>
                                 <div class="slide slide3">
-                                    <span class="ribon">BEST 3</span>
-                                    <span class="btn">[커플왕]</span>
-                                </div> -->
+                                    <p class="ribon">BEST 3</p>
+                                    <p class="btn">킹 귀여워요 &#43; 실버</p>
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -183,56 +182,138 @@
                         </h3>
                         <div class="rankingbox">
                             <div class="ranking_btn">
-                                <button>해</button>
-                                <button>달</button>
-                                <button>별</button>
+                                <a href="#" class="on">해</a>
+                                <a href="#">달</a>
+                                <a href="#">별</a>
                             </div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>순위</th>
-                                        <th>별명</th>
-                                        <th>등급</th>
-                                        <th>포인트</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><img src="./imgs/rankimg1.png" alt=""></td>
-                                        <td>발로하는게임</td>
-                                        <td>10</td>
-                                        <td>10039</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img src="./imgs/rankimg2.png" alt="">
-                                        </td>
-                                        <td>S.HwanS2</td>
-                                        <td>9</td>
-                                        <td>7577</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img src="./imgs/rankimg3.png" alt="">
-                                        </td>
-                                        <td>난뽀기</td>
-                                        <td>9</td>
-                                        <td>4036</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>정신아픔이</td>
-                                        <td>9</td>
-                                        <td>3533</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>모가지</td>
-                                        <td>8</td>
-                                        <td>3473</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div id="ranking_list">
+                                <table class="on">
+                                    <thead>
+                                        <tr>
+                                            <th>순위</th>
+                                            <th>별명</th>
+                                            <th>등급</th>
+                                            <th>포인트</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="./imgs/rankimg1.png" alt=""></td>
+                                            <td>[강혁]</td>
+                                            <td>10</td>
+                                            <td>5709</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>발로하는게임</td>
+                                            <td>9</td>
+                                            <td>5536</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>젯킹올콤</td>
+                                            <td>9</td>
+                                            <td>3417</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>차주호</td>
+                                            <td>9</td>
+                                            <td>3406</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>왕매미</td>
+                                            <td>8</td>
+                                            <td>3322</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>순위</th>
+                                            <th>별명</th>
+                                            <th>등급</th>
+                                            <th>포인트</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="./imgs/rankimg1.png" alt=""></td>
+                                            <td>안녕하세요..</td>
+                                            <td>10</td>
+                                            <td>3137</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>밍이출동</td>
+                                            <td>9</td>
+                                            <td>3132</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>샌드맨</td>
+                                            <td>9</td>
+                                            <td>2217</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>멍멍야옹</td>
+                                            <td>9</td>
+                                            <td>2154</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>알투오랜만이야</td>
+                                            <td>8</td>
+                                            <td>2095</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>순위</th>
+                                            <th>별명</th>
+                                            <th>등급</th>
+                                            <th>포인트</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="./imgs/rankimg1.png" alt=""></td>
+                                            <td>빠냐냐</td>
+                                            <td>10</td>
+                                            <td>7319</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>_____꽃</td>
+                                            <td>9</td>
+                                            <td>7006</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>McLaren</td>
+                                            <td>9</td>
+                                            <td>6896</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>EN_explorer</td>
+                                            <td>9</td>
+                                            <td>6859</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>조춘봉</td>
+                                            <td>8</td>
+                                            <td>6289</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </li>
                 </ul>
