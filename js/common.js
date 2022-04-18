@@ -22,3 +22,9 @@ $('.ranking_btn > a').on('click', function(){
 
     return false
 })
+
+$(document).ready(function(){
+    $('#close').click(function(){
+        $('#pop').hide();
+    })
+})
