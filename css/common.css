@@ -124,14 +124,14 @@
 
 /* 팝업창 */
 #pop {
-    width:250px; height:300px;
+    width:250px; height:260px;
     background-color: #3d3d3d;
     color:#fff;
     position:fixed;
     top:100px; right:100px;
     border:2px solid #000;
 }
-#pop .pop_text {height:250px; padding:50px 5px;}
+#pop .pop_text {padding:50px 5px; text-align: center;}
 #close {
     border:1px solid #fff;
     width:50%;
