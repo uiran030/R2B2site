@@ -43,15 +43,16 @@
 }
 #header #nav .depth2{
     position:absolute;
-    top:100%; left:20px;
-    width:150px;
+    top:100%; left:0;
+    width:100%;
     height:300px;
     text-align: left;
+    padding-left:20px;
     padding-top:15px;
     display: none;
     z-index: 99999;
 }
-#header #nav:hover .depth2 {
+#header #nav .depth1:hover .depth2 {
     display: block;
 }
 #header #nav .depth2 > li {
@@ -72,7 +73,7 @@
     height:250px;
     display: none;
 }
-#nav:hover + .decobox { display: block;}
+.depth1:hover + .decobox { display: block;}
 
 /* right 박스 */
 #header .rightnav{width:300px;}
@@ -82,16 +83,21 @@
     display: inline-block;
     margin-right:20px;
 }
+#header .rightnav .depth1 > li:nth-child(1), #header .rightnav .depth1 > li:nth-child(2){
+    transition: all 0.3s;
+}
+#header .rightnav .depth1 > li:nth-child(1):hover, #header .rightnav .depth1 > li:nth-child(2):hover{
+    color:rgba(226, 226, 226, 0.884)
+}
 #header .rightnav .depth1 > li:nth-child(3){
-    /* background: #05deda; */
     background-color: #35ceca;
     padding:0 15px;
     line-height: 50px;
+    transition: all 0.3s;
 }
-/* #header .rightnav .depth1 > li:nth-child(3):hover {
-    background-color: #05deda;
-} */
-
+#header .rightnav .depth1 > li:nth-child(3):hover{
+    color:rgb(78, 78, 78);
+}
 
 /* 풋터구역 */
 #foot{
